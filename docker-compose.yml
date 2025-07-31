@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # Serviço do Banco de Dados
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver_db
+    environment:
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: '${SA_PASSWORD}' # Pega a senha do arquivo .env
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql-data:/var/opt/mssql
+
+  # Serviço do Back-end
+  backend:
+    container_name: backend_api
+    build:
+      context: .
+      dockerfile: SysObiOnline/Dockerfile
+    ports:
+      - "5037:8080" # Mapeia a porta 5037 do seu PC para a porta 8080 do container
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Server=db,1433;Database=SysObi;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True;
+      - SA_PASSWORD=${SA_PASSWORD} # Passa a senha para o entrypoint.sh
+    depends_on:
+      - db
+
+  # Serviço do Front-end
+  frontend:
+    container_name: frontend_app
+    build:
+      context: ./Front-Completo/front-part1-main
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Mapeia a porta 3000 do seu PC para a porta 80 do Nginx
+    depends_on:
+      - backend
+
+volumes:
+  mssql-data:

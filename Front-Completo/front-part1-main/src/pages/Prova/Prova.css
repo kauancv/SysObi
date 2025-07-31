@@ -1,0 +1,146 @@
+/* src/pages/Prova/Prova.css */
+
+.prova-container {
+    background-color: #25263A;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.prova-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #3a3b53;
+}
+
+.progresso-prova {
+    font-weight: bold;
+}
+
+.prova-content {
+    padding: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.enunciado-geral, .pergunta-especifica, .opcoes-lista, .prova-actions {
+    margin-bottom: 30px;
+}
+
+.enunciado-geral {
+    background-color: #3a3b53;
+    padding: 20px;
+    border-radius: 8px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.pergunta-especifica {
+    font-size: 1.3rem;
+}
+
+.opcoes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.opcao-item {
+    display: flex;
+    align-items: center;
+    background-color: #3a3b53;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.opcao-item:hover {
+    border-color: #5a5b7d;
+}
+
+.opcao-item.selecionada {
+    border-color: #319d09;
+    background-color: #4a4b6b;
+    transform: scale(1.02);
+}
+
+.opcao-item input[type="radio"] {
+    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+    accent-color: #319d09;
+}
+
+.prova-actions {
+    text-align: center;
+}
+
+.avancar-button {
+    background-color: #319d09;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.avancar-button:hover {
+    background-color: #28a400;
+}
+
+.status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #25263A;
+}
+
+.status-container.error {
+    color: #ff5252;
+}
+
+
+
+.opcao-item.correta {
+    border-color: #28a400;
+    background-color: #2e4a3a;
+}
+
+.opcao-item.errada {
+    border-color: #c93434;
+    background-color: #4a2e2e;
+}
+
+.feedback-mensagem {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: -10px; 
+    margin-bottom: 30px;
+}
+
+.feedback-mensagem.correto {
+    color: #a7ffaf;
+    background-color: rgba(40, 164, 0, 0.3);
+}
+
+.feedback-mensagem.errado {
+    color: #ff9d9d;
+    background-color: rgba(201, 52, 52, 0.3);
+}
