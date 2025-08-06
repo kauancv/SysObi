@@ -20,7 +20,7 @@ services:
       context: .
       dockerfile: SysObiOnline/Dockerfile
     ports:
-      - "5037:8080" # Mapeia a porta 5037 do seu PC para a porta 8080 do container
+      - "5037:8080" # Mapeia a porta 5037  para a porta 8080 do container
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:8080
@@ -36,7 +36,7 @@ services:
       context: ./Front-Completo/front-part1-main
       dockerfile: Dockerfile
     ports:
-      - "3000:80" # Mapeia a porta 3000 do seu PC para a porta 80 do Nginx
+      - "3000:80" # Mapeia a porta 3000 para a porta 80 do Nginx
     depends_on:
       - backend
 

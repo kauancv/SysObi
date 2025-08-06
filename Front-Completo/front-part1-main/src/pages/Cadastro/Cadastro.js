@@ -1,14 +1,11 @@
-
-
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { FaEye, FaEyeSlash, FaArrowLeft } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import './Cadastro.css';
 
-
 const Cadastro = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -36,20 +33,27 @@ const Cadastro = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!name || !email || !password || !confirmPassword) {
+ 
+    if (!name.trim() || !email || !password || !confirmPassword) {
       showNotification('Por favor, preencha todos os campos.', 'error');
       return;
     }
+
+    if (password.length < 8) {
+      showNotification('A senha deve ter no mínimo 8 caracteres.', 'error');
+      return;
+    }
+
     if (password !== confirmPassword) {
       showNotification('As senhas não coincidem!', 'error');
       return;
     }
 
     const userData = {
-      name: name,
+      name: name.trim(),
       email: email,
       password: password,
-      role: "2"
+      role: '2',
     };
 
     try {
@@ -111,7 +115,7 @@ const Cadastro = () => {
               <input
                 type={passwordShown ? 'text' : 'password'}
                 id="password"
-                placeholder="Senha"
+                placeholder="Mínimo de 8 caracteres"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />

@@ -1,4 +1,3 @@
-# Usamos a imagem do SDK como base para tudo
 FROM mcr.microsoft.com/dotnet/sdk:8.0
 
 # 1. Instala as ferramentas do EF Core e adiciona ao PATH

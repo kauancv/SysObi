@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kauanpc/Vídeos/SysObiOnline/SysObiOnline.csproj": {}
+    "/home/kauanpc/Documentos/SysObi/SysObiOnline/SysObiOnline.csproj": {}
   },
   "projects": {
-    "/home/kauanpc/Vídeos/SysObiOnline/SysObiOnline.csproj": {
+    "/home/kauanpc/Documentos/SysObi/SysObiOnline/SysObiOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kauanpc/Vídeos/SysObiOnline/SysObiOnline.csproj",
+        "projectUniqueName": "/home/kauanpc/Documentos/SysObi/SysObiOnline/SysObiOnline.csproj",
         "projectName": "SysObiOnline",
-        "projectPath": "/home/kauanpc/Vídeos/SysObiOnline/SysObiOnline.csproj",
+        "projectPath": "/home/kauanpc/Documentos/SysObi/SysObiOnline/SysObiOnline.csproj",
         "packagesPath": "/home/kauanpc/.nuget/packages/",
-        "outputPath": "/home/kauanpc/Vídeos/SysObiOnline/obj/",
+        "outputPath": "/home/kauanpc/Documentos/SysObi/SysObiOnline/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kauanpc/.nuget/NuGet/NuGet.Config"

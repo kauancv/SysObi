@@ -20,14 +20,14 @@ const AdminDashboard = () => {
     OptionC: '',
     OptionD: '',
     OptionE: '',
-    CorrectAnswer: '', 
-    Level: 'junior', 
-    Year: '2021', 
-    Phase: '1', 
-    IsMultipleParts: false 
+    CorrectAnswer: '',
+    Level: 'junior',
+    Year: '2021',
+    Phase: '1',
+    IsMultipleParts: false
   });
 
-  
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
@@ -47,10 +47,12 @@ const AdminDashboard = () => {
       return () => clearTimeout(notificationTimer.current);
   }, []);
 
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.Name || !formData.Statement || !formData.Content || !formData.CorrectAnswer || !formData.OptionA) {
+
+    const { Name, Statement, Content, OptionA, OptionB, OptionC, OptionD, OptionE, CorrectAnswer } = formData;
+    if (!Name || !Statement || !Content || !CorrectAnswer || !OptionA || !OptionB || !OptionC || !OptionD || !OptionE) {
       showNotification('Preencha todos os campos obrigatórios!', 'error');
       return;
     }
@@ -124,14 +126,14 @@ const AdminDashboard = () => {
           </div>
 
           <div className="alternativas-container">
-            <h3>Alternativas</h3>
+            <h3>Alternativas (Todas são obrigatórias)</h3>
             <div className="form-group-inline"><label>A)</label><input type="text" name="OptionA" value={formData.OptionA} onChange={handleChange}/></div>
             <div className="form-group-inline"><label>B)</label><input type="text" name="OptionB" value={formData.OptionB} onChange={handleChange}/></div>
             <div className="form-group-inline"><label>C)</label><input type="text" name="OptionC" value={formData.OptionC} onChange={handleChange}/></div>
             <div className="form-group-inline"><label>D)</label><input type="text" name="OptionD" value={formData.OptionD} onChange={handleChange}/></div>
             <div className="form-group-inline"><label>E)</label><input type="text" name="OptionE" value={formData.OptionE} onChange={handleChange}/></div>
           </div>
-          
+
           <div className="form-group">
             <h3>Resposta Correta</h3>
             <div className="radio-group">
@@ -143,7 +145,7 @@ const AdminDashboard = () => {
               ))}
             </div>
           </div>
-         
+
           <div className="filtros-container">
               <div className="form-group">
                 <label>Nível</label>

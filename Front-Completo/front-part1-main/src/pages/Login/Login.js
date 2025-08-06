@@ -24,8 +24,13 @@ const Login = () => {
     event.preventDefault();
     setError('');
 
-    if (!email || !senha) {
-      setError('PREENCHA OS CAMPOS DE E-MAIL E SENHA!');
+    if (!email) {
+      setError('Preencha o campo de e-mail');
+      return;
+    }
+
+    if (!senha) {
+      setError('Preencha o campo de senha');
       return;
     }
 

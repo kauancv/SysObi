@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bq7x2O5Wdic=",
+  "dgSpecHash": "Mt7Lw8wEVOA=",
   "success": true,
-  "projectFilePath": "/home/kauanpc/Vídeos/SysObiOnline/SysObiOnline.csproj",
+  "projectFilePath": "/home/kauanpc/Documentos/SysObi/SysObiOnline/SysObiOnline.csproj",
   "expectedPackageFiles": [
     "/home/kauanpc/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/home/kauanpc/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
