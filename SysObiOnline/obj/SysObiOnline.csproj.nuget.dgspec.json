@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/kauanpc/Documentos/SysObi/SysObiOnline/SysObiOnline.csproj": {}
+    "/home/aspire/Vídeos/SysObi/SysObiOnline/SysObiOnline.csproj": {}
   },
   "projects": {
-    "/home/kauanpc/Documentos/SysObi/SysObiOnline/SysObiOnline.csproj": {
+    "/home/aspire/Vídeos/SysObi/SysObiOnline/SysObiOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kauanpc/Documentos/SysObi/SysObiOnline/SysObiOnline.csproj",
+        "projectUniqueName": "/home/aspire/Vídeos/SysObi/SysObiOnline/SysObiOnline.csproj",
         "projectName": "SysObiOnline",
-        "projectPath": "/home/kauanpc/Documentos/SysObi/SysObiOnline/SysObiOnline.csproj",
-        "packagesPath": "/home/kauanpc/.nuget/packages/",
-        "outputPath": "/home/kauanpc/Documentos/SysObi/SysObiOnline/obj/",
+        "projectPath": "/home/aspire/Vídeos/SysObi/SysObiOnline/SysObiOnline.csproj",
+        "packagesPath": "/home/aspire/.nuget/packages/",
+        "outputPath": "/home/aspire/Vídeos/SysObi/SysObiOnline/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/kauanpc/.nuget/NuGet/NuGet.Config"
+          "/home/aspire/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -99,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.117/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -9,7 +9,7 @@ services:
       ACCEPT_EULA: 'Y'
       SA_PASSWORD: '${SA_PASSWORD}' # Pega a senha do arquivo .env
     ports:
-      - "1433:1433"
+      - "1434:1433"
     volumes:
       - mssql-data:/var/opt/mssql
 
